@@ -1,0 +1,1 @@
+drix.dae should be placed in this directory along with associated texture maps.
