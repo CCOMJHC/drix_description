@@ -11,4 +11,19 @@
         </geometry>
     </visual>
   </link>
+
+  <link name="${namespace}/ek80">
+    <visual>
+      <geometry>
+        <cylinder length="0.0752" radius="0.06"/>
+      </geometry>
+      <origin rpy="0 1.57075 0" xyz="-0.0376 0 0"/>
+    </visual>
+  </link>
+
+  <joint name="${namespace}/base_to_ek80" type="fixed">
+      <parent link="${namespace}/base_link"/>
+      <child link="${namespace}/ek80"/>
+      <origin rpy="0 1.57075 0" xyz="-0.728 -0.131 -0.134 " />
+  </joint>
 </robot>
