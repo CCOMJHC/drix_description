@@ -26,4 +26,21 @@
       <child link="${namespace}/ek80"/>
       <origin rpy="0 1.57075 0" xyz="-0.728 -0.131 -0.134 " />
   </joint>
+  
+  
+  <link name="sonar_vcs">
+    <visual>
+      <geometry>
+        <cylinder length="0.0752" radius="0.06"/>
+      </geometry>
+      <origin rpy="0 1.57075 0" xyz="-0.0376 0 0"/>
+    </visual>
+  </link>
+
+  <joint name="${namespace}/base_to_sonar_vcs" type="fixed">
+    <parent link="${namespace}/base_link"/>
+    <child link="sonar_vcs"/>
+    <origin rpy="3.14 0 0" xyz="-0.586 0.080 -0.149 " />
+  </joint>
+
 </robot>
