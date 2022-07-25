@@ -37,8 +37,37 @@
     </visual>
   </link>
 
+
+  <link name="${namespace}/base_link_north_up">
+    <visual>
+        <geometry>
+            <sphere radius="0.01"/>
+        </geometry>
+    </visual>
+  </link>
+
+  <joint name="${namespace}/base_north_up_to_base" type="floating">
+    <parent link="${namespace}/base_link_north_up"/>
+    <child link="${namespace}/base_link"/>
+  </joint>
+
+
+  <link name="${namespace}/base_link_level">
+    <visual>
+        <geometry>
+            <sphere radius="0.01"/>
+        </geometry>
+    </visual>
+  </link>
+
+  <joint name="${namespace}/base_north_up_to_base_level" type="floating">
+    <parent link="${namespace}/base_link_north_up"/>
+    <child link="${namespace}/base_link_level"/>
+  </joint>
+
+
   <joint name="${namespace}/base_to_sonar_vcs" type="fixed">
-    <parent link="${namespace}/base_link"/>
+    <parent link="${namespace}/base_link_level"/>
     <child link="sonar_vcs"/>
     <origin rpy="3.14 0 0" xyz="-0.586 0.080 -0.149 " />
   </joint>
