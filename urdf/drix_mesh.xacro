@@ -24,7 +24,8 @@
   <joint name="${namespace}/base_to_ek80" type="fixed">
       <parent link="${namespace}/base_link"/>
       <child link="${namespace}/ek80"/>
-      <origin rpy="0 1.57075 0" xyz="-0.728 -0.131 -0.134 " />
+      <!-- <origin rpy="0 1.57075 0" xyz="-0.728 -0.131 -0.134 " /> -->
+      <origin rpy="3.14 0 0" xyz="-0.728 -0.131 -0.134 " />
   </joint>
   
   
